@@ -1,0 +1,33 @@
+.grid {
+    background: #eee;
+    max-width: 70vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vh 20vh 30vh;
+    gap: 1vw;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.grid > div {
+    background: #ccc;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.grid > div:nth-child(1) {
+    background: crimson;
+    grid-column: 1 / span 2;
+}
+
+.grid > div:nth-child(5) {
+    background: cornflowerblue;
+    grid-row: span 2;
+}
+
+.grid > div:nth-child(6) {
+    background: bisque;
+    justify-self: start;
+}
